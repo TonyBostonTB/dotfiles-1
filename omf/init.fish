@@ -8,6 +8,10 @@ set -x GOPATH $HOME/workspace/go
 set -x PATH $GOPATH/bin $PATH
 
 switch (uname)
+case Linux
+  set -x PATH "$HOME/.linuxbrew/bin" $PATH
+  set -x MANPATH "$HOME/.linuxbrew/share/man" $MANPATH
+  set -x INFOPATH "$HOME/.linuxbrew/share/info" $INFOPATH
 case Darwin
   set -x PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
   set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
